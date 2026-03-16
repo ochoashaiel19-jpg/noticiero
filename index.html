@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8">
+<title>INFORME GLOBAL</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script>
+function cargarSeccion(pagina){
+fetch(pagina)
+.then(response => response.text())
+.then(data=>{
+document.getElementById("contenido").innerHTML=data;
+});
+}
+</script>
+
+</head>
+
+<body>
+
+<header>
+<h1>INFORME GLOBAL</h1>
+<p>Información actualizada del mundo</p>
+</header>
+
+<nav>
+
+<a href="#" onclick="cargarSeccion('inicio.html')">Inicio</a>
+<a href="#" onclick="cargarSeccion('nacionales.html')">Nacionales</a>
+<a href="#" onclick="cargarSeccion('deportes.html')">Deportes</a>
+<a href="#" onclick="cargarSeccion('espectaculos.html')">Espectaculos</a>
+<a href="#" onclick="cargarSeccion('cultura.html')">Cultura</a>
+<a href="#" onclick="cargarSeccion('contacto.html')">Contacto</a>
+
+</nav>
+
+<div id="contenido">
+
+<h2>Bienvenido al portal</h2>
+<p>Selecciona una sección del menú.</p>
+
+</div>
+
+<footer>
+
+<p>Portal de Noticias 2026</p>
+<p>Información, actualidad y cultura</p>
+
+</footer>
+
+</body>
+</html>
